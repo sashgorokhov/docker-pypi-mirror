@@ -1,4 +1,4 @@
-FROM python:2.7-alpine
-RUN pip install pep381client
+FROM python:3.5-alpine
+RUN pip install bandersnatch
 VOLUME /var/spool/pypi-mirror
-CMD /usr/local/bin/pep381run /var/spool/pypi-mirror
+CMD bandersnatch mirror
